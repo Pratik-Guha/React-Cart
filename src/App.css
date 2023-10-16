@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+aside{
+  box-shadow: -10px 0px  10px rgba(0, 0,0, 0.182);
+  
+}
+#carItem{
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+}

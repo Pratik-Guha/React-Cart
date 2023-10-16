@@ -10,7 +10,7 @@ const ProductCard = ({name,id,price,handler,imgSrc}) => {
         <h4 className=' m-4'>${price}</h4>
         <Box as='button' p={'2'} borderRadius={'md'} fontWeight={'bold'} bgGradient='linear(to-r, teal.500, green.500)'  _hover={{
             bgGradient: 'linear(to-r, red.500, yellow.500)',
-          }} onClick={()=>handler()}>
+          }} onClick={()=>handler({name,price,id,quantity:1,imgSrc})}>
           Add to Cart
         </Box>
     </div>

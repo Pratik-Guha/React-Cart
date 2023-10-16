@@ -1,6 +1,7 @@
 import React from 'react'
 import { ProductCard } from '../components'
 import toast from 'react-hot-toast'
+import { useDispatch } from 'react-redux'
 const Home = () => {
 
   const ProductList=[
@@ -17,9 +18,14 @@ const Home = () => {
       id:"samsungs9",
     },
   ]
-  const addToCartHandler=()=>{
+  const dispatch=useDispatch();
+  const addToCartHandler=(options)=>{
+    dispatch({type:"addToCart",payload:options})
+    dispatch({
+      type:"calculatePrice",
+    })
     toast.success("Item added to cart")
-  }
+  };
   return (
     <div className='flex justify-center items-center p-3 flex-wrap min-h-screen'>
         
